@@ -1,0 +1,352 @@
+/* Colors */
+:root {
+  --primary-blue: hsl(246, 80%, 60%);
+  --primary-light-red-work: hsl(15, 100%, 70%);
+  --primary-soft-blue-play: hsl(195, 74%, 62%);
+  --primary-light-red-study: hsl(348, 100%, 68%);
+  --primary-lime-green-exercise: hsl(145, 58%, 55%);
+  --primary-violet-social: hsl(264, 64%, 52%);
+  --primary-soft-orange-self-care: hsl(43, 84%, 65%);
+
+  --neutral-very-dark-blue: hsl(226, 43%, 10%);
+  --neutral-dark-blue: hsl(235, 46%, 20%);
+  --neutral-desaturated-blue: hsl(235, 45%, 61%);
+  --neutral-pale-blue: hsl(236, 100%, 87%);
+}
+
+/* Typography */
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  background-color: var(--neutral-very-dark-blue);
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+}
+
+/* Colors */
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.bg-primary-light-red-work {
+  background-color: var(--primary-light-red-work);
+}
+
+.bg-primary-soft-blue-play {
+  background-color: var(--primary-soft-blue-play);
+}
+
+.bg-primary-light-red-study {
+  background-color: var(--primary-light-red-study);
+}
+
+.bg-primary-lime-green-exercise {
+  background-color: var(--primary-lime-green-exercise);
+}
+
+.bg-primary-violet-social {
+  background-color: var(--primary-violet-social);
+}
+
+.bg-primary-soft-orange-self-care {
+  background-color: var(--primary-soft-orange-self-care);
+}
+
+.bg-neutral-very-dark-blue {
+  background-color: var(--neutral-very-dark-blue);
+}
+
+.bg-neutral-dark-blue {
+  background-color: var(--neutral-dark-blue);
+}
+
+.bg-neutral-desaturated-blue {
+  background-color: var(--neutral-desaturated-blue);
+}
+
+.bg-neutral-pale-blue {
+  background-color: var(--neutral-pale-blue);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.9375rem;
+}
+
+.card__icon {
+  margin-bottom: -1.5rem;
+  margin-top: -0.25rem;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card__icon img {
+  object-fit: contain;
+  width: 4.875rem;
+  height: 4.875rem;
+}
+
+.card__content {
+  position: relative;
+  z-index: 10;
+  background-color: var(--neutral-dark-blue);
+  padding: 1.75rem 1.5rem;
+  border-radius: 0.9375rem;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card__name {
+  color: #fff;
+  font-family: Rubik;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card__duration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__duration__current {
+  color: #fff;
+  font-family: Rubik;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card__duration__previous {
+  color: #bbc0ff;
+  text-align: right;
+  font-family: Rubik;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  color: var(--bg-primary-blue);
+  border-radius: 0.9375rem;
+}
+
+.header__intro {
+  color: var(--neutral-pale-blue);
+  font-family: Rubik;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.header__user-name {
+  color: #fff;
+  font-family: Rubik;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.header__user-avatar {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  border: 4px solid #fff;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  background-color: var(--primary-blue);
+  border-radius: 0.9375rem;
+}
+
+.header__duration-selector {
+  background-color: var(--neutral-dark-blue);
+  border-radius: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.56rem 1.5rem;
+}
+
+button {
+  background: none;
+  border: none;
+
+  color: #7078c9;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  transition: all 0.1s;
+}
+
+button:hover {
+  color: #bbc0ff;
+  cursor: pointer;
+}
+
+button.active {
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 20.43rem;
+  margin: 5rem auto;
+}
+
+@media screen and (min-width: 71rem) {
+  .wrapper {
+    min-width: 70rem;
+    flex-direction: row;
+    height: 32rem;
+    margin: 0 auto;
+  }
+
+  .header__duration-selector {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .header__user-avatar {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .header__intro {
+    font-size: 0.9375rem;
+  }
+
+  .header__user-name {
+    font-size: 2.5rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    max-width: 16rem;
+  }
+
+  .header__user {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 22rem;
+  }
+
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-grow: 1;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .card__duration {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card__duration__current {
+    font-size: 3.5rem;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header bg-neutral-dark-blue">
+        <div class="header__user">
+          <img
+            class="header__user-avatar"
+            src="./images/image-jeremy.png"
+            alt=""
+          />
+          <div class="header__title">
+            <p class="header__intro">Report for</p>
+            <h1 class="header__user-name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="header__duration-selector">
+          <button onclick="update('daily')" id="daily">Daily</button>
+          <button onclick="update('weekly')" class="active" id="weekly">
+            Weekly
+          </button>
+          <button onclick="update('monthly')" id="monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="card-list">
+        <div class="card bg-primary-light-red-work" id="work">
+          <div class="card__icon">
+            <img src="./images/icon-work.svg" alt="" />
+          </div>
+          <div class="card__content">
+            <div class="card__header">
+              <div class="card__name">Work</div>
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </div>
+            <div class="card__duration">
+              <div class="card__duration__current">32hrs</div>
+              <div class="card__duration__previous">Previous - 36hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-primary-soft-blue-play" id="play">
+          <div class="card__icon">
+            <img src="./images/icon-play.svg" alt="" />
+          </div>
+          <div class="card__content">
+            <div class="card__header">
+              <div class="card__name">Play</div>
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </div>
+            <div class="card__duration">
+              <div class="card__duration__current">10hrs</div>
+              <div class="card__duration__previous">Previous - 8hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-primary-light-red-study" id="study">
+          <div class="card__icon">
+            <img src="./images/icon-study.svg" alt="" />
+          </div>
+          <div class="card__content">
+            <div class="card__header">
+              <div class="card__name">Study</div>
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </div>
+            <div class="card__duration">
+              <div class="card__duration__current">4hrs</div>
+              <div class="card__duration__previous">Previous - 7hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-primary-lime-green-exercise" id="exercise">
+          <div class="card__icon">
+            <img src="./images/icon-exercise.svg" alt="" />
+          </div>
+          <div class="card__content">
+            <div class="card__header">
+              <div class="card__name">Exercise</div>
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </div>
+            <div class="card__duration">
+              <div class="card__duration__current">4hrs</div>
+              <div class="card__duration__previous">Previous - 5hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-primary-violet-social" id="social">
+          <div class="card__icon">
+            <img src="./images/icon-social.svg" alt="" />
+          </div>
+          <div class="card__content">
+            <div class="card__header">
+              <div class="card__name">Social</div>
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </div>
+            <div class="card__duration">
+              <div class="card__duration__current">1hr</div>
+              <div class="card__duration__previous">Previous - 5hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-primary-soft-orange-self-care" id="self-care">
+          <div class="card__icon">
+            <img src="./images/icon-self-care.svg" alt="" />
+          </div>
+          <div class="card__content">
+            <div class="card__header">
+              <div class="card__name">Self Care</div>
+              <img src="./images/icon-ellipsis.svg" alt="" />
+            </div>
+            <div class="card__duration">
+              <div class="card__duration__current">2hrs</div>
+              <div class="card__duration__previous">Previous - 2hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
